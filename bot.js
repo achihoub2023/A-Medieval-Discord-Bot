@@ -1,12 +1,23 @@
-const Discord = require('discord.js'); 
-const client = new Discord.Client();  
-client.on('ready', () => {   
-    console.log(`Logged in as ${client.user.tag}!`); 
+  
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const { prefix, token } = require('./config.json');
+
+client.once('ready', () => {
+	console.log(client.user.tag +' is Ready!');
 });
-client.on('message', msg => {  
-    if(msg.author.bot) return;
-    if (msg.content === 'ping') {     
-        msg.reply('Pong!');   
-    } 
+
+
+
+client.on('message', message => {
+	if (message.content === `${prefix}ping`) {
+        message.channel.send('Pong.');
+    } else if (message.content === `${prefix}beep`) {
+        message.channel.send('Boop.');
+    }else if(message.content ===`${prefix}server` ){
+        message.channel.send(`This server's name is: ${message.guild.name}`);
+    }
 });
-client.login('NzE3ODA0NTMzMjk1ODc0MDQ4.Xts9qQ.wD6l4a4VvI7lOmIecXAnzahzqao');
+
+
+client.login(token);
