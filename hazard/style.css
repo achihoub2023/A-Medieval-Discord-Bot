@@ -1,0 +1,15 @@
+body{
+background-color: #66441B;
+color:#000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+list-style: 1.8em;
+}
+input[type = text]{
+    padding:4px 12px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+submit[type = submit]{
+    background-color: aquamarine;
+}
