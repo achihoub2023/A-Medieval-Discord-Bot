@@ -1,0 +1,19 @@
+tr {
+  
+}
+
+th {
+  background-color: lightgrey;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  border: 1px solid black;
+}
+
+td, th {
+  padding: 5px;
+  border: 1px solid grey;
+  text-align: center;
+}

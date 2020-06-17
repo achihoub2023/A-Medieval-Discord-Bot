@@ -5,11 +5,29 @@ font-family: Arial, Helvetica, sans-serif;
 font-size: 16px;
 list-style: 1.8em;
 }
+
 input[type = text]{
     padding:4px 12px;
     margin: 4px 0;
     box-sizing: border-box;
 }
-submit[type = submit]{
-    background-color: aquamarine;
+
+
+
+
+table, td {
+    border: 1px solid black;
+}
+
+.row {
+    white-space: nowrap;
+}
+  
+.row > div {
+    width: 300px;
+    display: inline-block;
+}
+
+h1{
+    text-align: center;
 }
