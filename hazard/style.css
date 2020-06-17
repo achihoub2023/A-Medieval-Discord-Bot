@@ -12,9 +12,6 @@ input[type = text]{
     box-sizing: border-box;
 }
 
-
-
-
 table, td {
     border: 1px solid black;
 }
@@ -30,4 +27,18 @@ table, td {
 
 h1{
     text-align: center;
+}
+
+#play_button{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#game_winner{
+    background-color: darkblue;
+    vertical-align: -400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
 }
