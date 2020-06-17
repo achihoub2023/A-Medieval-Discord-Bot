@@ -1,3 +1,4 @@
+<!basic HTML setup>
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -9,6 +10,7 @@
 <link rel="stylesheet"
 href ="style.css">
 
+<! Introduce the game>
 <h1 id = "header">
     Hazard: A Medieval Drinking Game
 </h1>
@@ -18,57 +20,51 @@ href ="style.css">
 <div id="container">
 <p id="history_content">
     Hazard is an old drinking game played by Medieval peasants. Here, Sir Phillip will
-    play against you. Enter you guess below!
+    play against you. Enter you guess below and the number of simulations you want!
 </p>
 </div>
+
 <div id="guess" class = "row">
-<!create the buttons below>
+<!create the buttons and input containers below>
 <div>
  <form>
-        Your Guess:
-        <input type = "number" id ="guess_box">
+        <b>Your Guess (between 5 and 9):</b>
+        <input type = "number" id ="guess_box" min = "5" max = "9">
     </form> 
 </div>
 
 <div>
     <form>
-    Add number of trials, enter 1 if you want just one game.
-    <input type = "number" id = "trials_box">
+    <b>Add number of trials, enter 1 if you want just one game.</b>
+    <input type = "number" id = "trials_box" max = "55">
     </form>
 </div>
 
 </div>
 
+<br>
+</br>
+
+<!play button to initialize the hazard simulation>
 <div>
-    <button id = "play_button" onclick="createFunction()">Play!</button>
+    <button id = "play_button" onclick="createRows()">Play!</button>
 </div>
+<br>
+</br>
+
+<!js code to make the table>
+<script> src = "action.js"</script>
 
 
-<script>
-function createFunction() {
- var table = document.getElementById("game_winner");
- let i = 1;
- while(i<10){
-  var row = table.insertRow(i);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  cell1.innerHTML = "Player";
-  cell2.innerHTML = "Phillip";
-  i = i+1;
- }
-
-}
-</script>
-
-
+<!setup the table initially, showing relevant data>
 <table id="game_winner">
   <tr>
     <td>Game</td>
     <td>Winner</td>
+    <td>Your Guess</td>
+    <td>Phillip's Bet<td>
   </tr>
   
 </table>
-
-
 
 </html>
