@@ -29,7 +29,7 @@ href ="style.css">
 <div>
  <form>
         <b>Your Guess (between 5 and 9):</b>
-        <input type = "number" id ="guess_box" min = "5" max = "9">
+        <input type = "number" id ="guess_box" min = "4" max = "9">
     </form> 
 </div>
 
@@ -52,19 +52,25 @@ href ="style.css">
 <br>
 </br>
 
-<!js code to make the table>
-<script> src = "action.js"</script>
+
 
 
 <!setup the table initially, showing relevant data>
 <table id="game_winner">
   <tr>
     <td>Game</td>
+    <td>Your Roll</td>
     <td>Winner</td>
-    <td>Your Guess</td>
-    <td>Phillip's Bet<td>
+    <td>Score<td>
   </tr>
   
 </table>
+
+<!js code to make the table>
+<script src = "action.js" type = "text/javascript"></script>
+<script> 
+createRows();
+</script>
+
 
 </html>
