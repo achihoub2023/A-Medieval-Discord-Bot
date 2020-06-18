@@ -1,8 +1,13 @@
+/**
+ * This is a basic script that allows the user to change tabs.
+ * @param {*} evt, the current tab.
+ * @param {*} loc, location to be changed.
+ */
 function changeTab(evt, loc) {
     // Declare all variables
     var i, tabcontent, tablinks;
   
-    // Get all elements with class="tabcontent" and hide them
+    // Get all elements with class="tabs and hide them
     tabcontent = document.getElementsByClassName("tabs");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";

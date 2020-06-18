@@ -17,9 +17,9 @@
 
 <!Setup the tabs for the website>
 <div class = "tab">
-<button class = "tablinks" onclick="changeTab(event,'Hazard: A Medieval Drinking Game')"> Hazard: A Medieval Drinking Game</button>
-<button class = "tablinks" onclick="changeTab(event,'History')"> History </button>
-<button class = "tablinks" onclick="changeTab(event,'Leaderboard')">Leaderboard</button>
+    <button class = "tablinks" onclick = "changeTab(event,'Hazard: A Medieval Drinking Game')"> Hazard: A Medieval Drinking Game</button>
+    <button class = "tablinks" onclick = "changeTab(event,'History')">History</button>
+    <button class = "tablinks" onclick = "changeTab(event,'Leaderboard')">Leaderboard</button>
 </div>
 
 <!Main tab>
@@ -41,7 +41,7 @@
     <div id="guess" class = "row">
     <!create the buttons and input containers below>
     <div>
-    <form>
+        <form>
             <b>Your Guess (between 5 and 9):</b>
             <input type = "number" id ="guess_box" min = "4" max = "9">
         </form> 
@@ -63,6 +63,7 @@
     <div>
         <button id = "play_button" onclick="createRows()">Play!</button>
     </div>
+
     <br>
     </br>
 
@@ -85,15 +86,18 @@
 
 <! Include the history of this game in this tab>
 <div id = "History" class = "tabs">
-    <h3>HIHIHI</h3>
-    <p>TODO</p>
+    <h3>
+        <p>
+            Hazard is ...
+        </p>
+    </h3>
 </div>
 
 <!Leaderboard tab for the overall game>
 <div id = "Leaderboard" class = "tabs">
-<h4>
-<p> To add </p>
-</h4>
+    <h4>
+        <p> To add, please see later</p>
+    </h4>
 </div>
 
 <!javascript files to be added>
