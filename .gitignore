@@ -54,12 +54,6 @@ typings/
 # Optional eslint cache
 .eslintcache
 
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
 # Optional REPL history
 .node_repl_history
 
@@ -107,17 +101,8 @@ dist
 # API Keys file
 config.json
 
-# Private Info
-email_logging.json
-smtp_server.json
-netids.json
-fiddler.json
-
 # VSCode folder
 .vscode/
-
-# Soundboard folder
-sounds/
 
 # stored settings
 settings.sqlite3
