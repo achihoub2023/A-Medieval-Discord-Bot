@@ -1,9 +1,13 @@
-function createRows(){
-    //control the number of times the game is played
+/**
+ * This function appends rows dynamically to an HTML page with the results of a game of Hazard. 
+ */
+function createRows(){   
+    //access the table, roll, and number of trials from the html page
      var table = document.getElementById("game_winner");
      var trials = document.getElementById("trials_box").value;
      var roll = document.getElementById("guess_box").value;
-       
+    
+    //control the number of times the game is played
     let i = 0;
     let numRow = 1;
          while(i<trials){
@@ -20,7 +24,7 @@ function createRows(){
             //Play Hazard
             var winner = playHazard(roll);
 
-            //keep a tally of the winners for the trials
+            //keep an internal tally of the winners for the trials
             var wins = 0;
             var losses= 0;
 
@@ -40,6 +44,12 @@ function createRows(){
          }
     }
 
+/**
+ * This function plays the Medieval Game Hazard by taking in the user's main number and then simulating
+ * rolls in order to determine who is the final winner. 
+ * @param {*} roll, integer retrieved from the HTML page regarding the player's main. 
+ * @returns winner: a String with the word Player or Phillip, whoever won the bout.
+ */
 function playHazard(roll){
 
     // Initialize the rolls for Sir Phillip
@@ -91,6 +101,7 @@ function playHazard(roll){
     //last case
      }else if(losing_rolls.includes(phillips_roll) || losing_rolls.includes(phillips_roll2))return phil;
 
-     //modifier to deal with any particular edge cases for now.
+     //modifier to deal with any particular edge cases for now. Needs more testing to figure out any potential
+     //loopholes
      else return phil;
 }
