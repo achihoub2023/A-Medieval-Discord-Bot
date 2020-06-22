@@ -12,6 +12,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { prefix, token } = require('./config.json');
+const { isRegExp } = require('util');
 const spawn = require('child_process').spawn
 
 //const requests = require(fetch)
@@ -58,6 +59,8 @@ function showVideo(){
  * Basic commands
  * ping: 
  * 
+ * 
+ * TODO: Fix the speghetti code
  */
 client.on('message', async message => {
     // ignore messages that are from bots or other communications
@@ -77,6 +80,8 @@ client.on('message', async message => {
         message.reply(`${quote}`);
     }else if(message.content === `${prefix}bard`){
         message.reply(`${showVideo()}`)
+    }else if(message.content === `${prefix}hazard`){
+        message.reply()
     }
 });
 
