@@ -9,11 +9,13 @@
 
 
 //establish discord clients, child processes
+const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { prefix, token } = require('./config.json');
 const { isRegExp } = require('util');
-const spawn = require('child_process').spawn
+client.commands = new Discord.Collection();
+//const spawn = require('child_process').spawn
 
 //const requests = require(fetch)
 
@@ -31,7 +33,7 @@ const spawn = require('child_process').spawn
 
 
 var currentDate = new Date();
-var response = spawn();
+//var response = spawn();
  
 client.once('ready', () => {
     console.log(client.user.tag +' is Ready!');
@@ -62,6 +64,10 @@ function showVideo(){
  * 
  * TODO: Fix the speghetti code
  */
+
+
+
+
 client.on('message', async message => {
     // ignore messages that are from bots or other communications
     if(message.author.bot) return;
@@ -81,7 +87,7 @@ client.on('message', async message => {
     }else if(message.content === `${prefix}bard`){
         message.reply(`${showVideo()}`)
     }else if(message.content === `${prefix}hazard`){
-        message.reply()
+        message.reply('Play Hazard against me here: https://hazard-game.herokuapp.com/')
     }
 });
 

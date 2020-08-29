@@ -22,4 +22,16 @@ function changeTab(evt, loc) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(loc).style.display = "block";
     evt.currentTarget.className += " active";
+
+
+
+    function write_student_grades(){
+          boolean does_not_meet_qualifications = true;
+          
+
+
+
+
+
+    }
   }

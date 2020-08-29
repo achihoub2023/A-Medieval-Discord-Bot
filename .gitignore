@@ -104,5 +104,7 @@ config.json
 # VSCode folder
 .vscode/
 
+node_modules/*
+
 # stored settings
 settings.sqlite3
