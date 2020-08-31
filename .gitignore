@@ -108,3 +108,7 @@ node_modules/*
 
 # stored settings
 settings.sqlite3
+
+#packages
+package.json
+package-lock.json

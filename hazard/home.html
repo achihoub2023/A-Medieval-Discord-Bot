@@ -9,21 +9,43 @@
 
 <title>Hazard!</title>
 
+<!javascript files to be added>
+<script src = "website_manager.js" type = "text/javascript"></script>
+<script src = "play_hazard.js" type = "text/javascript"></script>
+
+
 <!Set the icon for the website>
 <link rel="icon" href ="phillip-ii-of-france-2.jpg" sizes="32x32">
 
 <!Link the css file to be used>
-<link rel="stylesheet" href ="style.css">
+<link rel="stylesheet" href ="overall_style.css">
+<link rel="stylesheet" href = "home.css">
 
 <!Setup the tabs for the website>
-<div class = "tab">
-    <button class = "tablinks" onclick = "changeTab(event,'Hazard: A Medieval Drinking Game')"> Hazard: A Medieval Drinking Game</button>
-    <button class = "tablinks" onclick = "changeTab(event,'History')">History</button>
-    <button class = "tablinks" onclick = "changeTab(event,'Leaderboard')">Leaderboard</button>
-</div>
+<!Nav bar and text>
+<body>
+    <div class= "topnav" id = "myTopnav">
+        <a href="home.html" class = "active">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Scores
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="scores.html">Past Scores</a>
+            </div>
+          </div>
+        <div class="dropdown">
+            <button class="dropbtn">History
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="history.html">How to play</a>
+            </div>
+          </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropdownManager()">&#9776;</a>
+    </div>    
 
 <!Main tab>
-<div id = "Hazard: A Medieval Drinking Game" class = "tabs">
     <! Introduce the game>
     <h1 id = "header">
         Hazard: A Medieval Drinking Game
@@ -40,17 +62,17 @@
 
     <div id="guess" class = "row">
     <!create the buttons and input containers below>
-    <div>
+    <div id = "trials2">
         <form>
             <b>Your Guess (between 5 and 9):</b>
             <input type = "number" id ="guess_box" min = "4" max = "9">
         </form> 
     </div>
 
-    <div>
+    <div id = "trials">
         <form>
-            <b>Add number of trials, enter 1 if you want just one game.</b>
-            <input type = "number" id = "trials_box" max = "55">
+            <b>Add number of trials (1-20)</b>
+            <input type = "number" id = "trials_box" max = "20">
         </form>
     </div>
 
@@ -61,7 +83,7 @@
 
     <!play button to initialize the hazard simulation>
     <div>
-        <button id = "play_button" onclick="createRows()">Play!</button>
+        <button id = "play_button" onclick="main()">Play!</button>
     </div>
 
     <br>
@@ -79,27 +101,9 @@
     </table>
 
     <!js code to make the table>
-    <script> 
-        createRows();
-    </script>
-</div>
 
-<! Include the history of this game in this tab>
-<div id = 'History' class = "tabs">
-    <h3>
-        This is ....
-    </h3>
 </div>
+</body>
 
-<!Leaderboard tab for the overall game>
-<div id = "Leaderboard" class = "tabs">
-    <h4>
-        <p> To add, please see later  ssdssd</p>
-    </h4>
-</div>
-
-<!javascript files to be added>
-<script src = "website_manager.js" type = "text/javascript"></script>
-<script src = "play_hazard.js" type = "text/javascript"></script>
 
 </html>

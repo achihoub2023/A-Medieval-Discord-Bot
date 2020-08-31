@@ -10,7 +10,10 @@ function createRows(){
     //control the number of times the game is played
     let i = 0;
     let numRow = 1;
-         while(i<trials){
+    //keep an internal tally of the winners for the trials
+    var wins = 0;
+    var losses= 0;
+    while(i<trials){
             // number of entries to show
             var row = table.insertRow(numRow);
             var cell1 = row.insertCell(0);
@@ -23,10 +26,6 @@ function createRows(){
 
             //Play Hazard
             var winner = playHazard(roll);
-
-            //keep an internal tally of the winners for the trials
-            var wins = 0;
-            var losses= 0;
 
             if(winner.localeCompare("Player")) wins = wins+1;
             else losses+=1;
@@ -42,6 +41,35 @@ function createRows(){
             i = i+1;
             numRow = numRow+1;
          }
+         return [wins,losses];
+    }
+
+    /**
+     * Emulating sleep functions in other languages
+     * @param {*} milliseconds, integer 
+     */
+    function sleep(milliseconds) { 
+        let timeStart = new Date().getTime(); 
+        while (true) { 
+            let elapsedTime = new Date().getTime() - timeStart; 
+            if (elapsedTime > milliseconds) { 
+                break; 
+            } 
+        } 
+    } 
+
+    /**
+     * 
+     * @param {*} wins , integer of player losses
+     * @param {*} losses , integer of player losses
+     */
+    function alertWinner(wins,losses){
+        sleep(1000);
+            if(wins > losses){
+                 alert("You Won!!!!!");
+             }else{
+                 alert("Sir Phillip Wins");
+             }
     }
 
 /**
@@ -104,4 +132,10 @@ function playHazard(roll){
      //modifier to deal with any particular edge cases for now. Needs more testing to figure out any potential
      //loopholes
      else return phil;
+}
+
+//Driver function
+function main(){
+    var win_loss = createRows();
+    alertWinner(win_loss[0],win_loss[1]);
 }

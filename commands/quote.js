@@ -8,7 +8,7 @@ function getQuote(){
 }
 
 module.exports = {
-    name:`${prefix}ping`,
+    name:`${prefix}quote`,
     description: "Ping command",
     execute(message, args) {
         var quote = getQuote();

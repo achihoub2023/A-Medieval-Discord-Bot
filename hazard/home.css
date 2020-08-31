@@ -1,0 +1,18 @@
+#trials{
+    display: inline-block;
+    text-align: right;
+}
+
+#trials2{
+    display: inline-block;
+    margin-right:500px ;
+    margin-left: 20px;
+    text-align: left;
+}
+#History{
+    margin-left: 10px;
+}
+
+#history_content{
+    margin-left: 50px;
+}
